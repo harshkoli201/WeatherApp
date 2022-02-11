@@ -7,7 +7,7 @@ import requests
 app = Tk()
 app.title("World Weather")
 app.geometry('700x500')
-app.config(bg = 'green')
+app.config(bg = 'lightblue')
 
 url = "http://api.openweathermap.org/data/2.5/weather?q={}&appid={}"
 
@@ -46,10 +46,6 @@ def get_weather(city):
     else:
         return None
 
-        
-
-
-
 city_name = StringVar()
 city_entry = Entry(app, textvariable=city_name, width=45)
 city_entry.pack(pady=20)
@@ -57,17 +53,17 @@ city_entry.pack(pady=20)
 button = Button(app, text = "Search Weather", command=search,  width= 15)
 button.pack(pady=10)
 
-location_name = Label(app, text ="", font=('bold',20))
+location_name = Label(app,bg = 'lightblue', text ="", font=('bold',20))
 location_name.pack(pady=10)
 
 img = PhotoImage(file="")
-Image = Label(app, image = img)
+Image = Label(app,bg = 'lightblue', image = img)
 Image.pack()
 
-Temp_lbl= Label(app, text="",font=('bold',20))
+Temp_lbl= Label(app,bg = 'lightblue', text="",font=('bold',20))
 Temp_lbl.pack(pady=10)
 
-weather_lbl = Label(app, text="",font=('bold',20))
+weather_lbl = Label(app, bg = 'lightblue',text="",font=('bold',20))
 weather_lbl.pack(pady=10)
 
 app.mainloop()
